@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex basis
+    </title>
+    <style>
+        /* on settiing flex grow 1 in home and 2 in logout box it will remain twice as large as home box while changing screen size */
+        /* on setting flex shrink to 5 in home and 1 in  logout box then home will shrink 5 times faster then logot box and logout box will be of bigger size */
+         /* felx:1 property is a short hand for flex: grow 1;
+            flex: shrink 1:
+            flex-basis:0*/
+          
+        .container{
+            border: 5px solid #ffcc5c;
+            display: flex;
+        }
+        .home{
+            background-color: aqua;
+            flex-grow: 0;
+            flex-shrink: 5;
+            flex-basis: 200px;
+        }
+        .logout{
+            flex-shrink: 1;
+            flex-grow: 0;
+            background-color: orangered;
+            flex-basis: 200px;
+        }
+    </style>
+</head>
+<body>
+    
+<div class="container">
+    <div class="home">home</div>
+    <div class="logout">login</div>
+</div>
+
+</body>
+</html>
